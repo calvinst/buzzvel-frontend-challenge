@@ -85,6 +85,13 @@ public/images/     Hero, featured, avatar and people photos
 - Full-page desktop and mobile screenshots were reviewed visually.
 - **Not run:** Lighthouse, an automated accessibility audit, cross-browser testing (Chromium only), unit/E2E tests and visual-regression tests.
 
+## Known gaps and issues
+
+- **The contact form is a mock:** no API route, email delivery, spam protection or persistence. It needs a backend before real use.
+- **Links are placeholders:** footer links, “Log in”, “For Teams” and similar items point to section anchors (`#top`, `#contact`, etc.); there are no course, login or legal pages.
+- **No automated tests, ESLint or Storybook.** The brief marked Storybook and tests as optional. `npm run lint` is a type check only.
+- **Fonts require network on a cold build:** `next/font` fetches Plus Jakarta Sans during `next build`; an offline machine with no cache can fail the build.
+
 ## AI tools used
 
 - **DeepSeek Harness** (agentic coding assistant) — used as a supporting tool throughout development for design interpretation, implementation guidance, reviewing responsive layouts, refining spacing and geometry through headless-Chrome screenshots, and assisting with README documentation.
